@@ -1,0 +1,69 @@
+# .gitignore for Electrolysis Guide
+
+# Python (for local MkDocs/Sphinx builds)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node (if using npm for translations)
+node_modules/
+package-lock.json
+npm-debug.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# MkDocs/Sphinx build output
+site/
+_build/
+
+# Credentials/Secrets (if any)
+*.pem
+*.key
+secrets.*
+
+# Large files (use Git LFS for images)
+# *.png
+# *.jpg
+# *.pdf
+venv-host/
+codeberg-annaaurora/
+
+# Cloned reference repos (use links in the docs instead)
+references/
+
+# Internal working documents (not for public repo)
+PLAN.md
+TODO.md
+REVIEW-REPORT.md
+## Credentials (stored outside repo in workspace root)
+.git-credentials

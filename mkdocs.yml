@@ -1,0 +1,124 @@
+# MkDocs Configuration
+# For ReadTheDocs deployment
+
+site_name: Don't Panic, Galvanic!
+site_description: "Build your own DIY galvanic electrolysis machine for permanent hair removal. Complete open-source guide: PCB, soldering, 3D printing, firmware & usage."
+site_author: Open-Source Community
+site_url: https://diy-electrolysis-guide.readthedocs.io/
+
+# Repository
+repo_name: VogonElectroworks/dont-panic-galvanic
+repo_url: https://github.com/VogonElectroworks/dont-panic-galvanic
+edit_uri: blob/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2026 Open-Source Community
+
+# Theme (Material for MkDocs - Modern & Mobile-Friendly)
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.highlight
+    - search.share
+    - search.suggest
+  icon:
+    logo: material/needle
+    repo: fontawesome/brands/github
+
+# Navigation (written relative to each language directory)
+nav:
+  - Home: index.md
+  - Safety & Legal:
+      - safety-legal.md
+      - commercial-vs-diy.md
+  - Hardware:
+      - hardware-selection.md
+      - pcb-manufacturing.md
+      - component-sourcing.md
+      - Complete the PCB: assembly.md
+      - 3D Printing: 3d-printing.md
+      - Build the Needle Pen: pen.md
+      - Final Assembly: final-assembly.md
+      - Case Modding: modding.md
+  - Software:
+      - firmware.md
+  - Usage:
+      - calibration.md
+      - multimeter-basics.md
+      - usage.md
+      - body-areas.md
+      - troubleshooting.md
+
+# Plugins
+plugins:
+  - search
+  - glightbox
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+        - locale: de
+          name: Deutsch
+          site_name: Keine Panik, Galvanik!
+          site_description: "Baue dein eigenes DIY-Elektrolyse-Gerät für permanente Haarentfernung. Komplette Open-Hardware-Anleitung: Platine, Löten, 3D-Druck, Firmware und Anwendung."
+          nav_translations:
+            Home: Startseite
+            Safety & Legal: Sicherheit & Recht
+            Hardware: Hardware
+            Complete the PCB: Platine fertigstellen
+            "3D Printing": 3D-Druck
+            Build the Needle Pen: Nadelstift bauen
+            Final Assembly: Gerät zusammenbauen
+            Case Modding: Gehäuse-Modding
+            Software: Software
+            Usage: Anwendung
+            body-areas: Körperpartien
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/VogonElectroworks/dont-panic-galvanic
+    - icon: material/forum
+      link: https://github.com/VogonElectroworks/dont-panic-galvanic/discussions
+
+# Extra CSS/JS
+extra_css:
+  - stylesheets/extra.css
+
+# Markdown Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: "docs"
+      check_paths: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true

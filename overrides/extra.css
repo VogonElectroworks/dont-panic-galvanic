@@ -1,0 +1,19 @@
+/* Custom CSS for DIY Electrolysis Guide */
+
+/* Announcement bar - draft warning */
+.md-announce {
+  background: linear-gradient(135deg, #e65100 0%, #bf360c 100%);
+  border-bottom: 3px solid #ff8a65;
+  color: #fff;
+}
+
+.md-announce a,
+.md-announce strong {
+  color: #fff;
+}
+
+.md-announce__inner {
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0.5rem 1rem;
+}

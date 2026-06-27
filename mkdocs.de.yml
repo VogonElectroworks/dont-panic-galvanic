@@ -1,0 +1,134 @@
+# MkDocs Configuration - German only
+# For ReadTheDocs German translation project
+
+site_name: Keine Panik, Galvanik!
+site_description: "Baue dein eigenes DIY-Elektrolyse-Gerät für permanente Haarentfernung. Komplette Open-Hardware-Anleitung: Platine, Löten, 3D-Druck, Firmware und Anwendung."
+site_author: Open-Source Community
+site_url: https://dont-panic-galvanic-de.readthedocs.io/
+
+# Docs directory (German only)
+docs_dir: docs/de
+
+# Repository
+repo_name: VogonElectroworks/dont-panic-galvanic
+repo_url: https://github.com/VogonElectroworks/dont-panic-galvanic
+edit_uri: blob/main/docs/de/
+
+# Copyright
+copyright: Copyright &copy; 2026 Open-Source Community
+
+# Theme (Material for MkDocs - Modern & Mobile-Friendly)
+theme:
+  name: material
+  custom_dir: overrides
+  language: de
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - search.highlight
+    - search.share
+    - search.suggest
+  icon:
+    logo: material/needle
+    repo: fontawesome/brands/github
+
+# Navigation (German)
+nav:
+# Navigation (German)
+nav:
+  - Startseite: index.md
+  - Sicherheit & Recht:
+      - Sicherheit & Rechtliche Hinweise: safety-legal.md
+      - Kommerzielle Geräte vs. DIY: commercial-vs-diy.md
+  - Hardware:
+      - Hardware wählen: hardware-selection.md
+      - Von KiCad zu fertigen Platinen: pcb-manufacturing.md
+      - Bauteile beschaffen: component-sourcing.md
+      - Platine fertigstellen: assembly.md
+      - 3D-Druck: 3d-printing.md
+      - Nadelstift bauen: pen.md
+      - Gerät zusammenbauen: final-assembly.md
+      - Gehäuse-Modding: modding.md
+  - Software:
+      - Firmware installieren: firmware.md
+  - Anwendung:
+      - Strom einstellen & Lye berechnen: calibration.md
+      - Multimeter-Nutzung: multimeter-basics.md
+      - Erste Anwendung: usage.md
+      - Körperpartien: body-areas.md
+      - Fehlerbehebung: troubleshooting.md
+
+# Plugins
+plugins:
+  - search
+  - glightbox
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: de
+          default: true
+          name: Deutsch
+        - locale: en
+          name: English
+          site_name: Don't Panic, Galvanic!
+          nav_translations:
+            Startseite: Home
+            Sicherheit & Recht: Safety & Legal
+            Hardware: Hardware
+            Platine fertigstellen: Complete the PCB
+            "3D-Druck": "3D Printing"
+            Nadelstift bauen: Build the Needle Pen
+            Gerät zusammenbauen: Final Assembly
+            Gehäuse-Modding: Case Modding
+            Software: Software
+            Firmware installieren: Install Firmware
+            Anwendung: Usage
+            Strom einstellen & Lye berechnen: Calibration
+            Multimeter-Nutzung: Multimeter Basics
+            Erste Anwendung: First Application
+            Körperpartien: Body Areas
+            Fehlerbehebung: Troubleshooting
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/VogonElectroworks/dont-panic-galvanic
+    - icon: material/forum
+      link: https://github.com/VogonElectroworks/dont-panic-galvanic/discussions
+
+# Extra CSS/JS
+extra_css:
+  - extra.css
+
+
+# Markdown Extensions
+markdown_extensions:
+  - admonition
+  - attr_list
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets:
+      base_path: ["docs", "docs/de"]
+      check_paths: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - toc:
+      permalink: true

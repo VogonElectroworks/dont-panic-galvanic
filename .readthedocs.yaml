@@ -1,0 +1,23 @@
+# .readthedocs.yaml
+# Read the Docs configuration file
+
+version: 2
+
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.11"
+  jobs:
+    install:
+      - python -m pip install --upgrade --no-cache-dir pip
+      - python -m pip install --no-cache-dir -r docs/requirements.txt
+    build:
+      html:
+        - if [ "$READTHEDOCS_LANGUAGE" = "de" ]; then CONFIG="mkdocs.de.yml"; else CONFIG="mkdocs.yml"; fi && python -m mkdocs build --config-file $CONFIG --site-dir $READTHEDOCS_OUTPUT/html
+
+python:
+  install:
+    - requirements: docs/requirements.txt
+
+# Optionally build your docs in additional formats such as PDF and ePub
+formats: all
