@@ -1,0 +1,5 @@
+site_name: Don't Panic, Galvanic!
+site_url: https://dont-panic-galvanic.readthedocs.io/
+site_description: DIY galvanic electrolysis hair removal device — build guide (under development)
+repo_url: https://github.com/VogonElectroworks/dont-panic-galvanic
+docs_dir: docs
